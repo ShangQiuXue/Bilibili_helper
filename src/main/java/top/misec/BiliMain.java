@@ -37,7 +37,6 @@ public class BiliMain {
         Config.getInstance().configInit();
         if (!Config.getInstance().isSkipDailyTask()) {
             DailyTask dailyTask = new DailyTask();
-            dailyTask.doDailyTask();
         } else {
             log.info("已开启了跳过本日任务，本日任务跳过（不会发起任何网络请求），如果需要取消跳过，请将skipDailyTask值改为false");
             ServerPush.doServerPush();
